@@ -19,7 +19,7 @@ namespace PhoneApp
 			// Perform any additional setup after loading the view, typically from a nib.
 			var TranslatedNumber = string.Empty;
 
-			CallButton.TouchUpInside += (object sender, System.EventArgs e) =>
+			TranslateButton.TouchUpInside += (object sender, System.EventArgs e) =>
 			 {
 				 var Translator = new PhoneTranslator();
 				 TranslatedNumber = Translator.ToNumber(PhoneNumberText.Text);
@@ -60,7 +60,7 @@ namespace PhoneApp
 		async void Validate()
 		{
 			var Client = new SALLab05.ServiceClient();
-			var Result = await Client.ValidateAsync("TuCorreo", "TuClaveDeAcceso", this);
+			var Result = await Client.ValidateAsync("email", "password", this);
 			var Alert = UIAlertController.Create("Resultado", $"{Result.Status}\n{Result.FullName}\n{Result.Token} ", UIAlertControllerStyle.Alert);
 			Alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
 			PresentViewController(Alert, true, null);
