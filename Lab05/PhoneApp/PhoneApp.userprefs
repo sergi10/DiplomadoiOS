@@ -2,8 +2,25 @@
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="PhoneApp/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="PhoneApp/Main.storyboard" />
+      <File FileName="PhoneApp/PhoneTranslator.cs" Line="1" Column="1" />
+      <File FileName="PhoneApp/ViewController.cs" Line="69" Column="3" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PhoneApp" expanded="True">
+            <Node name="PhoneApp" expanded="True">
+              <Node name="Resources" expanded="True">
+                <Node name="Media.xcassets" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PhoneApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.72EF0626-41A9-4400-8830-A55627527E84" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
