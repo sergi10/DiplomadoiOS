@@ -48,6 +48,7 @@
                                 </state>
                                 <connections>
                                     <action selector="VerifyButton_TouchUpInside:" destination="BYZ-38-t0r" id="18" eventType="touchUpInside"/>
+                                    <segue id="3144" destination="2830" kind="show"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="368" translatesAutoresizingMaskIntoConstraints="NO">
@@ -55,9 +56,7 @@
                                 <state key="normal" title="Historial de Llamadas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue id="528" destination="379" kind="show"/>
-                                </connections>
+                                <connections/>
                             </button>
                         </subviews>
                         <variation key="default">
@@ -112,7 +111,7 @@
         </scene>
         <scene sceneID="378">
             <objects>
-                <tableViewController id="379" sceneMemberID="viewController" customClass="ClassHistoryController" title="Historial de Llamadas">
+                <tableViewController id="379" sceneMemberID="viewController" customClass="ClassHistoryController" title="Historial de Llamadas" storyboardIdentifier="ClassHistoryController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="380">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +135,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="385" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-102" y="18"/>
+        </scene>
+        <scene sceneID="2829">
+            <objects>
+                <viewController id="2830" sceneMemberID="viewController" customClass="VirifyController" storyboardIdentifier="VirifyController" title="Verificación Lab">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2827"/>
+                        <viewControllerLayoutGuide type="bottom" id="2828"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2831">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2843" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="75" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2844" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="129" width="307" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2845" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="188" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2846" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="16" y="227" width="307" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2847" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="102" y="318" width="129" height="30"/>
+                                <state key="normal" title="Verificar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2843"/>
+                                <exclude reference="2844"/>
+                                <exclude reference="2845"/>
+                                <exclude reference="2846"/>
+                                <exclude reference="2847"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2843"/>
+                                <include reference="2844"/>
+                                <include reference="2845"/>
+                                <include reference="2846"/>
+                                <include reference="2847"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="UserEntry" destination="2844" id="name-outlet-2844"/>
+                        <outlet property="PassEntry" destination="2846" id="name-outlet-2846"/>
+                        <outlet property="VerifyButton" destination="2847" id="name-outlet-2847"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2832" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="22"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

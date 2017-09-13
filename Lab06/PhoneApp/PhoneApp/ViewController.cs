@@ -61,19 +61,19 @@ namespace PhoneApp
                     this.NavigationController.PushViewController(Controller, true);
                 }
             };
-            //VerifyButton.TouchUpInside += (object sender, System.EventArgs e) =>
-            //{
-            //    if (this.Storyboard.InstantiateViewController("VerificationController") is VerificationController Controller)
-            //    {
-            //        this.NavigationController.PushViewController(Controller, true);
-            //    }
-            //};
+            VerifyButton.TouchUpInside += (object sender, System.EventArgs e) =>
+            {
+                if (this.Storyboard.InstantiateViewController("VirifyController") is VirifyController Controller)
+                {
+                    this.NavigationController.PushViewController(Controller, true);
+                }
+            };
         }
 
-        partial void VerifyButton_TouchUpInside(UIButton sender)
-        {
-            Validate();
-        }
+        //partial void VerifyButton_TouchUpInside(UIButton sender)
+        //{
+        //    Validate();
+        //}
 
         async void Validate()
         {
@@ -90,13 +90,13 @@ namespace PhoneApp
             // Release any cached data, images, etc that aren't in use.
         }
 
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            base.PrepareForSegue(segue, sender);
-            if (segue.DestinationViewController is ClassHistoryController controller)
-            {
-                controller.PhoneNumbers = PhoneNumbers;
-            }
-        }
+        //public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        //{
+        //    base.PrepareForSegue(segue, sender);
+        //    if (segue.DestinationViewController is ClassHistoryController controller)
+        //    {
+        //        controller.PhoneNumbers = PhoneNumbers;
+        //    }
+        //}
     }
 }
