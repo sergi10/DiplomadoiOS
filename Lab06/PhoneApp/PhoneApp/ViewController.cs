@@ -55,7 +55,8 @@ namespace PhoneApp
             };
             CallHistoryButton.TouchUpInside += (object sender, System.EventArgs e) =>
             {
-                if (this.Storyboard.InstantiateViewController("ClassHistoryController") is ClassHistoryController Controller)
+				CallHistoryController Controller = (PhoneApp.CallHistoryController)this.Storyboard.InstantiateViewController("CallHistoryController");
+				if (Controller != null)
                 {
                     Controller.PhoneNumbers = PhoneNumbers;
                     this.NavigationController.PushViewController(Controller, true);
@@ -63,7 +64,9 @@ namespace PhoneApp
             };
             VerifyButton.TouchUpInside += (object sender, System.EventArgs e) =>
             {
-                if (this.Storyboard.InstantiateViewController("VirifyController") is VirifyController Controller)
+				VirifyController Controller = (PhoneApp.VirifyController)this.Storyboard.InstantiateViewController("VirifyController");
+												  
+				if (Controller != null)
                 {
                     this.NavigationController.PushViewController(Controller, true);
                 }
@@ -93,7 +96,7 @@ namespace PhoneApp
         //public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
         //{
         //    base.PrepareForSegue(segue, sender);
-        //    if (segue.DestinationViewController is ClassHistoryController controller)
+        //    if (segue.DestinationViewController is CallHistoryController controller)
         //    {
         //        controller.PhoneNumbers = PhoneNumbers;
         //    }

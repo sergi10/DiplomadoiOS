@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio from the outlets and
 // actions declared in your storyboard file.
@@ -36,10 +36,6 @@ namespace PhoneApp
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton VerifyButton { get; set; }
-
-        [Action ("VerifyButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void VerifyButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
