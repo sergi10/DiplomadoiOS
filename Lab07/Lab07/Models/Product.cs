@@ -3,23 +3,24 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using NorthWind;
 using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace Lab07.Models
 {
 
 	public class Product : IProduct, INorthWindModel, IChangeStatusEventArgs
 	{
-		public int ProductID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public string ProductName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public int? SupplierID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public int? CategoryID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public string QuantityPerUnit { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public decimal? UnitPrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public short? UnitsInStock { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public short? UnitsOnOrder { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public short? ReorderLevel { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public bool Discontinued { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-		public StatusOptions Status { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+		public int ProductID { get ; set ; }
+		public string ProductName { get ; set ; }
+		public int? SupplierID { get ; set ; }
+		public int? CategoryID { get ; set ; }
+		public string QuantityPerUnit { get ; set ; }
+		public decimal? UnitPrice { get ; set ; }
+		public short? UnitsInStock { get ; set ; }
+		public short? UnitsOnOrder { get ; set ; }
+		public short? ReorderLevel { get ; set ; }
+		public bool Discontinued { get ; set ; }
+		public StatusOptions Status { get ; set ; }
 
 		public Product()
 		{
