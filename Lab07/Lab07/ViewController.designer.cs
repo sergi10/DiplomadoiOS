@@ -19,10 +19,6 @@ namespace Lab07
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField IdEntry { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField NameEntry { get; set; }
 
         [Outlet]
@@ -35,30 +31,17 @@ namespace Lab07
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel StatusLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField StockEntry { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton ValidateButton { get; set; }
 
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton VerifyButton { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
             if (CategoryEntry != null) {
                 CategoryEntry.Dispose ();
                 CategoryEntry = null;
-            }
-
-            if (IdEntry != null) {
-                IdEntry.Dispose ();
-                IdEntry = null;
             }
 
             if (NameEntry != null) {
@@ -76,11 +59,6 @@ namespace Lab07
                 SearchButton = null;
             }
 
-            if (StatusLabel != null) {
-                StatusLabel.Dispose ();
-                StatusLabel = null;
-            }
-
             if (StockEntry != null) {
                 StockEntry.Dispose ();
                 StockEntry = null;
@@ -89,11 +67,6 @@ namespace Lab07
             if (ValidateButton != null) {
                 ValidateButton.Dispose ();
                 ValidateButton = null;
-            }
-
-            if (VerifyButton != null) {
-                VerifyButton.Dispose ();
-                VerifyButton = null;
             }
         }
     }

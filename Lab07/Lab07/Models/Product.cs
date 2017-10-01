@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using System.Net.Http;
-using NorthWind;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using Newtonsoft.Json;
+using NorthWind;
 
 namespace Lab07.Models
 {
