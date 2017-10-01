@@ -34,18 +34,36 @@ namespace Lab07.Models
 			Product product = new Product();
 			//using (var Client = new System.Net.Http.HttpClient())
 			//{
-			Client.BaseAddress =
-				new Uri("https://ticapacitacion.com/webapi/northwind/");
+			//Client.BaseAddress =
+			//	new Uri("https://ticapacitacion.com/webapi/northwind");
 			Client.DefaultRequestHeaders.Accept.Clear();
 			Client.DefaultRequestHeaders.Accept.Add(
 			new MediaTypeWithQualityHeaderValue("application/json"));
 			// Notificar aqui que la API Web será invocada
 			product.Status = StatusOptions.CallingWebAPI;
+            string dir = "https://ticapacitacion.com/webapi/northwind/product/" + ID.ToString();
+            Uri productUri = new Uri(dir);
+            System.Diagnostics.Debug.WriteLine("\n\n dir = " + dir);
+            System.Diagnostics.Debug.WriteLine("\n\n productUri = " + productUri);
 
-			HttpResponseMessage Response =
-				await Client.GetAsync($"product/{ID}");
-			// Notificar aquí que se va a verificar el resultado de la llamada
-			product.Status = StatusOptions.VerifyingResult;
+            //var RES = await Client.GetStringAsync(dir);
+            var RES = await Client.GetStringAsync(productUri);
+            //var RES = await Client.GetAsync(dir);
+            //var RES = await Client.GetAsync(productUri);
+
+
+            System.Diagnostics.Debug.WriteLine("\n\n RES = " + RES);
+
+            HttpResponseMessage Response = await Client.GetAsync(dir);
+          //  HttpResponseMessage Response = await Client.GetAsync(productUri);
+
+
+
+            //await Client.GetAsync($"product/{ID}");
+
+
+            // Notificar aquí que se va a verificar el resultado de la llamada
+            product.Status = StatusOptions.VerifyingResult;
 
 			if (Response.IsSuccessStatusCode)
 			{
