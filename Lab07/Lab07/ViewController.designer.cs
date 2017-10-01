@@ -43,6 +43,10 @@ namespace Lab07
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ValidateButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton VerifyButton { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -80,6 +84,11 @@ namespace Lab07
             if (StockEntry != null) {
                 StockEntry.Dispose ();
                 StockEntry = null;
+            }
+
+            if (ValidateButton != null) {
+                ValidateButton.Dispose ();
+                ValidateButton = null;
             }
 
             if (VerifyButton != null) {
